@@ -49,10 +49,6 @@ p {
     p { font-size: 1.3em }
 }
 
-@media (min-width: 1440px) {
-    h1 { font-size: 3em }
-    p { font-size: 2em }
-}
 
 /* General Styles */
 header { 
@@ -98,9 +94,9 @@ button:hover { cursor: pointer }
 }
 
 @media (min-width: 1024px) {
-    header { padding: 2em 4em 4em }
+    header { padding: 2em 6em 3em }
 
-    article { padding: 0 4em 4em }
+    article { padding: 0 6em 4em }
 
     .main-article-image {
         height: 100%;
@@ -227,15 +223,18 @@ button.nav__link:hover { background-color: #eaa00d }
 @media (min-width: 1024px) {
     .article__main {
         grid-template-areas: 
-            "image image title title"
-            "image image subtitle subtitle"
-            "image image writer writer"
+            "image title title"
+            "image subtitle subtitle"
+            "image writer writer"
         ;
         column-gap: 4em;
-
     }
 
     .main-article-image {
         border-radius: 10px;
+    }
+
+    .article__main__title { 
+        margin: 0 auto .3em;
     }
 }
