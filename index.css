@@ -61,9 +61,11 @@ article {
     padding: 0 1em;
 }
 
-.article__subtitle {
-    margin: 0 auto .5em;
-}
+.article__subtitle { margin: 0 auto .5em }
+
+.article__secondary { margin-top: 2em }
+
+.article__secondary__title { margin: .5em auto }
 
 button:hover { cursor: pointer }
 
@@ -87,7 +89,8 @@ button:hover { cursor: pointer }
 
     article { padding: 0 2em }
 
-    .main-article-image { 
+    .main-article-image,
+    .secondary-article-image { 
         height: 350px;
         object-fit: cover;
     }
@@ -97,6 +100,8 @@ button:hover { cursor: pointer }
     header { padding: 2em 6em 3em }
 
     article { padding: 0 6em 4em }
+
+    .secondary__articles { padding: 0 5em }
 
     .main-article-image {
         height: 100%;
@@ -236,5 +241,20 @@ button.nav__link:hover { background-color: #eaa00d }
 
     .article__main__title { 
         margin: 0 auto .3em;
+    }
+}
+
+/* Sub Articles */
+@media (min-width: 1024px) {
+    .secondary__articles {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .article__secondary { padding: 0 1em }
+
+    .secondary-article-image {
+        height: 100%;
+        border-radius: 10px;
     }
 }
