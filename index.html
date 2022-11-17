@@ -17,11 +17,15 @@
         <div>
             <img src="./Assets/Logo.svg" alt="unifeed logo" class="logo">
         </div>
-        <button class="mobile-nav-toggle" aria-controls="nav">
-            <img src="./Assets/Hamburger Menu.svg" alt="nav toggle button" class="sr-only" aria-expanded="false">
+        <button 
+            class="nav-toggle" 
+            aria-label="toggle navigation"
+            aria-controls="nav"
+            aria-expanded="false">
+            <span class="sr-only"></span>
         </button>
-        <nav>
-            <ul id="nav" data-visible="false" class="nav__list">
+        <nav class="nav" data-visibility="false">
+            <ul id="nav" class="nav__list">
                 <li class="nav__list__item">
                     <a href="#" class="nav__link" aria-hidden="true">Home</a>
                 </li>
@@ -62,5 +66,7 @@
 
         
     </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
