@@ -42,12 +42,22 @@ h1 {
 p {
     font-weight: var(--fw-body);
     font-size: var(--fs-body);
+    line-height: 1.6em;
+}
+
+@media (min-width: 768px) {
+    p { font-size: 1.3em }
+}
+
+@media (min-width: 1440px) {
+    h1 { font-size: 3em }
+    p { font-size: 2em }
 }
 
 /* General Styles */
 header { 
     margin: 0 auto;
-    padding: 1em;
+    padding: 2em 1em;
 }
 
 article {
@@ -55,7 +65,47 @@ article {
     padding: 0 1em;
 }
 
+.article__subtitle {
+    margin: 0 auto .5em;
+}
+
 button:hover { cursor: pointer }
+
+.author-photo {
+    width: 3em;
+    height: 3em;
+}
+
+.author-name { 
+    font-size: .8em;
+    margin: 7px 0 0 15px;
+}
+
+.author-name span {
+    font-weight: bold;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    header { padding: 2em }
+
+    article { padding: 0 2em }
+
+    .main-article-image { 
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1024px) {
+    header { padding: 2em 4em 4em }
+
+    article { padding: 0 4em 4em }
+
+    .main-article-image {
+        height: 100%;
+    }
+}
 
 /* Header/Nav */
 header,
@@ -121,14 +171,14 @@ button.nav__link:hover { background-color: #eaa00d }
         border: none;
         width: 2em;
         aspect-ratio: 1;
-        top: 1em;
+        top: 2.5em;
         right: 2em;
         z-index: 9999;
     }
 
     .nav-toggle[aria-expanded="true"] {
         background-image: url("./Assets/Hamburger\ Menu.svg");
-        top: 1.5em;
+        top: 2.5em;
         right: 1.5em;
     }
 
@@ -142,5 +192,50 @@ button.nav__link:hover { background-color: #eaa00d }
     .nav__link {
         position: absolute;
         left: 3.5em;
+        font-size: 1.5em;
+    }
+
+    button.nav__link { font-size: 1.2em }
+}
+
+
+/* Main Article */
+.article__main {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        "image"
+        "title"
+        "subtitle"
+        "writer";
+}
+
+.article__image { grid-area: image }
+
+.article__main__title {
+    margin: .5em auto;
+    grid-area: title;
+}
+
+.article__main__subtitle { grid-area: subtitle }
+
+.author-photo-with-name { 
+    display: flex;
+    grid-area: writer;
+}
+
+@media (min-width: 1024px) {
+    .article__main {
+        grid-template-areas: 
+            "image image title title"
+            "image image subtitle subtitle"
+            "image image writer writer"
+        ;
+        column-gap: 4em;
+
+    }
+
+    .main-article-image {
+        border-radius: 10px;
     }
 }
