@@ -165,7 +165,7 @@ button.nav__link:hover { background-color: #eaa00d }
 
     .nav-toggle {
         display: block;
-        position: absolute;
+        position: fixed;
         background-image: url("./Assets/Close\ Button.svg");
         background-repeat: no-repeat;
         background-color: transparent;
@@ -233,6 +233,7 @@ button.nav__link:hover { background-color: #eaa00d }
             "image writer writer"
         ;
         column-gap: 4em;
+        padding-bottom: 3em;
     }
 
     .main-article-image {
@@ -258,3 +259,35 @@ button.nav__link:hover { background-color: #eaa00d }
         border-radius: 10px;
     }
 }
+
+
+/* Footer */
+footer { margin: 3em auto 2em }
+
+.footer__logo {
+    width: 30%;
+    padding: 0 1em;
+}
+.footer__copyright {
+    margin: 0 auto;
+    padding: 1em 1em 0;
+ }
+
+ @media (min-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2em;
+        margin-top: 4em;
+    }
+
+    .footer__logo { 
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer__copyright { 
+        margin: 0;
+        padding: 0;
+    }
+ }
