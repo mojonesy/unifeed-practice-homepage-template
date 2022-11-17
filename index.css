@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth }
+
+:root {
+    --ff-primary: 'Manrope', sans-serif;
+
+    --fw-h1: 600;
+    --fw-body: 300;
+
+    --fs-h1: 2em;
+    --fs-body: 1em;
+
+    --clr-dark: #060606;
+    --clr-light: #FEFEFE;
+    --clr-accent: #EA7E0D;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    color: var(--clr-dark);
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Typography */
+h1 {
+    font-weight: var(--fw-h1);
+    font-size: var(--fs-h1);
+}
+
+p {
+    font-weight: var(--fw-body);
+    font-size: var(--fs-body);
+}
+
+/* General Styles */
